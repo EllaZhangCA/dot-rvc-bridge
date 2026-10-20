@@ -84,6 +84,15 @@ RVC 主要改变音色，语速、语气、情绪和发音仍受到原声影响�
 
 工具支持查状态、列出/选择模型、调音高、切原声及启停。设备先通过桌面或 CLI 配置。当前只有一个活动模型槽位，索引比例固定为 0。工具名见 [English README](README.md#optional-mcp-controls)。
 
+## 让 Agent 协助安装
+
+让你的 Agent 先阅读 [AGENTS.md](AGENTS.md)，也可以从 [agent.md](agent.md) 进入。
+指南包含安装流程、已有虚拟声卡配置的保护、验证与恢复方法。Agent 可以提示你提供
+自己的权重，按你的要求协助在 Hugging Face 寻找候选，或说明如何用
+[RVC 官方项目](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI)
+在独立环境中训练并导出推理权重。没有角色权重也可以先完成软件安装；安装器不附带、
+不自动选择角色权重。
+
 ## 开发与扩展
 
 ```powershell

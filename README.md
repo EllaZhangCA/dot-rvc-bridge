@@ -84,6 +84,16 @@ Setup writes a machine-local `mcp.json`. Use its stdio entry with a compatible *
 
 Tools: `get_voice_status`, `list_local_models`, `list_voice_models`, `select_voice_model`, `set_voice_pitch`, `set_voice_index_ratio`, `start_voice_audio`, `pause_voice_audio`, and `set_voice_bypass`. Configure devices through the desktop or CLI first. The protected service has one active slot and keeps index ratio at zero.
 
+## Installing with an agent
+
+Ask your agent to read [AGENTS.md](AGENTS.md) (also linked from [agent.md](agent.md)).
+It covers installation, existing virtual-audio setups, verification and recovery.
+The agent can help you import your own weights, find candidates on Hugging Face when
+requested, or explain how to train an inference model using the
+[official RVC project](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI)
+in a separate environment. Missing character weights do not prevent software-only setup;
+no character weights are bundled or selected automatically by the installer.
+
 ## Development
 
 ```powershell

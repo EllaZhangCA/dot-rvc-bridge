@@ -4,7 +4,7 @@ import tomllib
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-FILES = ["README.md", "README_CN.md", "Setup.cmd", "Start.cmd", "easy-manifest.json", "LICENSE", "THIRD_PARTY.md", "pyproject.toml", "plugin.json",
+FILES = ["README.md", "README_CN.md", "AGENTS.md", "agent.md", "Setup.cmd", "Start.cmd", "easy-manifest.json", "LICENSE", "THIRD_PARTY.md", "pyproject.toml", "plugin.json",
          "config.example.toml", "engine-manifest.json", "engine-requirements.in",
          "engine-requirements.lock.txt", ".gitignore", ".gitattributes", "models/README.md"]
 FOLDERS = {"src": {".py"}, "tests": {".py"}, "scripts": {".py", ".ps1"},
