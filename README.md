@@ -8,6 +8,25 @@ A desktop controller, installer, and optional MCP server for routing Dot's playb
 
 This independent community project converts audio played on your PC; it is not an official OpenAI plugin or a native Dot voice API. The first release targets **Windows x64 with an NVIDIA GPU**. Local use was reported successful on an RTX 3090.
 
+## Warning: existing virtual audio setups
+
+> [!WARNING]
+> **Use with caution if you already use virtual audio cables, Voicemeeter, VAC, Sonar, other voice changers, or recording/streaming software with audio routing.** Sharing the same cable, conflicting device access, or changing audio routes can cause mixed audio, silence, double playback, or feedback. Compatibility with your existing setup is not guaranteed. Do not make your first test during a live stream, meeting, or recording.
+
+**Before installing or starting:**
+
+- Save/export your existing audio-software configuration and record Windows' default playback/recording devices, default communications devices, and per-app routes.
+- This release specifically uses **CABLE Input / CABLE Output (VB-Audio Virtual Cable)**. CABLE-A/B, Voicemeeter virtual devices, and other virtual cables are not interchangeable inputs in the current launcher. If another workflow already needs this cable, stop that workflow for the test; if both must run together, postpone using this release.
+- Setup skips driver installation when it detects the expected CABLE Output device. Detection does **not** mean the cable is unused. If you already have VB-CABLE but setup still proposes installing it, cancel the driver installer and check the installed device/driver first. Do not uninstall or reinstall a working shared driver just to try this app.
+- Start with headphones at low volume. Route only the app hosting Dot to CABLE Input, and keep RVC playback on physical headphones/speakers. Never feed RVC output back into the same cable or Dot's microphone. VB-CABLE forwards audio sent to its input to its output, so other apps using that input will also enter this route. [VB-CABLE documentation](https://vb-audio.com/Cable/).
+
+**If sound stops, echoes, or another app is affected:**
+
+1. Stop the RVC engine. In **Windows Settings → System → Sound → Volume mixer**, restore the Dot app's output to its previous device; use physical headphones/speakers temporarily to check normal playback. Check the app is unmuted. [Microsoft's app-audio troubleshooting](https://support.microsoft.com/en-us/windows/hardware/audio/fix-app-audio-not-working-while-system-sounds-work-in-windows).
+2. Restore your saved default devices, communications devices, and mixer/streaming-software routes. Restore Dot's usual microphone. Stop only the duplicate monitoring path introduced for this test, including Windows “Listen to this device” if you enabled it.
+3. If a device is busy or unavailable, close the apps using it and reopen them after selecting the intended devices. After a VB-CABLE driver installation, reboot as the vendor instructs, then recheck defaults and device selections. [VB-CABLE installation instructions](https://vb-audio.com/Cable/).
+4. Confirm your original audio workflow works before trying again. Avoid a global audio reset or driver removal as the first fix: other apps may rely on those settings or drivers. **Closing this app does not automatically restore Windows routing or your other software's configuration.**
+
 ## Quick start
 
 1. Download **dot-rvc-bridge-0.3.1-windows-easy.zip** from [Releases](https://github.com/EllaZhangCA/dot-rvc-bridge/releases/tag/v0.3.1). Extract to a permanent, writable folder. Choose this asset, not GitHub's automatic “Source code” ZIP.

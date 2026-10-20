@@ -8,6 +8,25 @@
 
 这是独立社区项目，并非 OpenAI 官方插件。它通过本机音频后处理改变播放出来的声音，不修改 Dot 原生声线，也不会自动改变手机端的声音。首版面向 **Windows x64 + NVIDIA 显卡**。
 
+## 警告：已有虚拟声卡或音频路由的用户慎用
+
+> [!WARNING]
+> **正在使用虚拟声卡、Voicemeeter、VAC、Sonar、其他变声器，或带音频路由的录音/直播软件的用户，请谨慎安装和启用本项目。** 共用同一条虚拟线、设备占用或路由变更可能造成串音、无声、重复播放或啸叫，不能保证与现有配置兼容。首次测试请避开直播、会议和录音期间。
+
+**安装或启用前：**
+
+- 保存或导出原有音频软件配置，记录 Windows 默认播放/录音设备、默认通信设备，以及各应用的输入输出路由。
+- 当前版固定使用 **CABLE Input / CABLE Output (VB-Audio Virtual Cable)**，不能直接用 CABLE-A/B、Voicemeeter 虚拟设备或其他虚拟线替代输入。如果原有工作流程已依赖这条线，请先停止该流程再测试；如果必须同时运行，暂缓使用当前版本。
+- 安装器检测到指定的 CABLE Output 后会跳过驱动安装，但**检测到设备不等于这条线空闲**。若已经安装 VB-CABLE，却仍提示安装，请取消驱动安装器，先核对设备和驱动状态。不要为了试用而卸载或重装其他软件正在依赖的驱动。
+- 首次使用耳机并调低音量，只将 Dot 所在应用送入 CABLE Input，RVC 输出选择实体耳机/音箱，不能接回同一虚拟线或 Dot 的麦克风。VB-CABLE 会把送入 Input 的声音转到 Output；其他应用若也使用同一输入，其声音也会进入这条链路。[VB-CABLE 官方说明](https://vb-audio.com/Cable/)。
+
+**遇到无声、回声或影响其他软件时：**
+
+1. 停止 RVC 引擎。进入 **Windows 设置 → 系统 → 声音 → 音量合成器**，把 Dot 所在应用的输出改回原设备；排查时可先直接选择实体耳机/音箱，确认应用未静音、正常播放可恢复。[微软应用音频排查说明](https://support.microsoft.com/en-us/windows/hardware/audio/fix-app-audio-not-working-while-system-sounds-work-in-windows)。
+2. 按之前的记录恢复默认设备、默认通信设备、混音器/直播软件路由，以及 Dot 原来的麦克风。仅关闭本次测试新增的重复监听；如果本次开启了 Windows“侦听此设备”，也将其关闭。
+3. 如果设备被占用或不可用，关闭使用该设备的软件，重新选择正确设备后再打开。安装过 VB-CABLE 驱动后，按厂商要求重启电脑，再核对默认设备及各软件的设备选择。[VB-CABLE 安装说明](https://vb-audio.com/Cable/)。
+4. 确认原有音频流程恢复正常，再单独测试本项目。不要一开始就全局重置音频或删除驱动，以免影响其他应用依赖的配置。**关闭本软件不会自动恢复 Windows 路由或其他音频软件的设置。**
+
 ## 快速开始
 
 1. 从 [Releases](https://github.com/EllaZhangCA/dot-rvc-bridge/releases/tag/v0.3.1) 下载 **dot-rvc-bridge-0.3.1-windows-easy.zip**，解压到固定、可写的目录。请选择这个附件，不要下载 GitHub 自动生成的 Source code ZIP。
