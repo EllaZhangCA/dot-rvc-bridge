@@ -1,0 +1,23 @@
+{
+  "uv": {
+    "version": "0.13.2",
+    "url": "https://github.com/astral-sh/uv/releases/download/0.13.2/uv-x86_64-pc-windows-msvc.zip",
+    "sha256": "9cfb447a4027550f134753253fdffbcd35b79a66dd888260bf6776891916069e",
+    "exe_sha256": "0d64a5ffcb3c035ea3410d59d230f68e691cd40df5007dd577804bb29c1eb336"
+  },
+  "python_control": "3.13.5",
+  "torch_validator": "2.10.0+cpu",
+  "numpy_validator": "2.2.6",
+  "repository": "EllaZhangCA/dot-rvc-bridge",
+  "release_tag": "v0.3.0",
+  "wheels": [
+    {
+      "file": "antlr4_python3_runtime-4.8-py3-none-any.whl",
+      "sha256": "726b24528fb1394ca1cda6a9ae8cd9bc6fbf5eac39198d75f071ca4198712946"
+    },
+    {
+      "file": "fairseq-0.12.2-cp310-cp310-win_amd64.whl",
+      "sha256": "a4a0cdcaa880e7891b353c8e77d2efcb7f6031581d7b9d2b237239b72951cab0"
+    }
+  ]
+}

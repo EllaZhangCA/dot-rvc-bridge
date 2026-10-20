@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dot-rvc-bridge"
+version = "0.3.0"
+description = "Local MCP controls for a source-verified w-okada v1 RVC engine"
+requires-python = ">=3.11"
+dependencies = ["mcp==2.3.0", "httpx==0.28.1"]
+
+[project.optional-dependencies]
+audio = ["sounddevice==0.5.3", "psutil==7.2.2"]
+
+[project.scripts]
+dot-rvc = "dot_rvc.cli:main"
+dot-rvc-mcp = "dot_rvc.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

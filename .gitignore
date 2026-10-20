@@ -1,0 +1,14 @@
+.venv/
+.reference/
+runtime/
+release-assets/
+*.local.toml
+*.log
+.pytest_cache/
+__pycache__/
+*.egg-info/
+build/
+dist/
+mcp.json
+models/*
+!models/README.md

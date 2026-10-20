@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dot-rvc-bridge",
+  "version": "0.3.0",
+  "description": "Inspect and control a compatible local RVC engine. Dot audio routing requires separate Windows setup; native Dot voice replacement is not provided.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Dot RVC Bridge",
+        "shortDescription": "本机 RVC 角色和音频控制（实验版）"
+      }
+    }
+  }
+}
