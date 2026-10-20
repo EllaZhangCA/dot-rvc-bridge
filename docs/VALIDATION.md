@@ -1,4 +1,4 @@
-# Validation scope — v0.3.0
+# Validation scope — v0.3.1
 
 Windows / NVIDIA RTX 3090, 2026-10-19.
 

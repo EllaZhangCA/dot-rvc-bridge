@@ -2,7 +2,7 @@
 
 **用自己的 RVC 模型，在 Windows 本地改变 Dot 的声线。**
 
-[English](README.md) · 简体中文 · [下载 Windows 懒人版](https://github.com/EllaZhangCA/dot-rvc-bridge/releases/tag/v0.3.0)
+[English](README.md) · 简体中文 · [下载 Windows 懒人版](https://github.com/EllaZhangCA/dot-rvc-bridge/releases/tag/v0.3.1)
 
 包含桌面控制器、安装器及可选 MCP 服务，支持模型导入、播放设备选择、音高调节、原声旁路和开始/暂停。已在 RTX 3090 的本机使用中获得成功反馈。
 
@@ -10,7 +10,7 @@
 
 ## 快速开始
 
-1. 从 [Releases](https://github.com/EllaZhangCA/dot-rvc-bridge/releases/tag/v0.3.0) 下载 **dot-rvc-bridge-0.3.0-windows-easy.zip**，解压到固定、可写的目录。请选择这个附件，不要下载 GitHub 自动生成的 Source code ZIP。
+1. 从 [Releases](https://github.com/EllaZhangCA/dot-rvc-bridge/releases/tag/v0.3.1) 下载 **dot-rvc-bridge-0.3.1-windows-easy.zip**，解压到固定、可写的目录。请选择这个附件，不要下载 GitHub 自动生成的 Source code ZIP。
 2. 双击 **Setup.cmd**。自动安装独立 Python 环境、CUDA 版 PyTorch、固定版本引擎和基础模型。首次需联网下载数 GB，请预留约 15 GB 磁盘空间。无需自行安装 Python、Node.js 或 C++ 编译工具。
 3. 若缺少 VB-CABLE，会打开官方签名安装器。在 Windows 管理员提示中确认发布者为 **BUREL VINCENT**，点击“是”，再在安装器点击 **Install Driver**。如提示重启，请重启电脑。Windows 默认麦克风和播放设备保持平常使用的设备。
 4. 双击 **Start.cmd**，点击 **导入模型 / Import .pth**，选择自己的权重；选择变声后播放到的耳机或音箱，点击 **开始变声 / Start**。
@@ -27,7 +27,7 @@ Dot 应用 → CABLE Input → CABLE Output → RVC → 耳机 / 音箱
 
 ## 支持范围
 
-| v0.3.0 支持 | 说明 |
+| v0.3.1 支持 | 说明 |
 | --- | --- |
 | RVC 推理权重 | 标准 **v2、f0=1**，18 项配置，32/40/48 kHz |
 | 音高提取 | RMVPE，使用 NVIDIA GPU 0 |

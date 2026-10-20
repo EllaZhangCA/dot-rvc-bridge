@@ -13,7 +13,8 @@ class ConfigurationTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        # Hosted Windows runners can return an 8.3 short name for TEMP.
+        self.root = Path(self.temp.name).resolve()
         self.fixture = EngineFixture(self.root)
         for key in ("serverAudioInputDevices", "serverAudioOutputDevices"):
             for device in self.fixture.state[key]:

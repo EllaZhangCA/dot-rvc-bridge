@@ -9,7 +9,7 @@
   "torch_validator": "2.10.0+cpu",
   "numpy_validator": "2.2.6",
   "repository": "EllaZhangCA/dot-rvc-bridge",
-  "release_tag": "v0.3.0",
+  "release_tag": "v0.3.1",
   "wheels": [
     {
       "file": "antlr4_python3_runtime-4.8-py3-none-any.whl",

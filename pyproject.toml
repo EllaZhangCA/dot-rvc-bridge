@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dot-rvc-bridge"
-version = "0.3.0"
+version = "0.3.1"
 description = "Local MCP controls for a source-verified w-okada v1 RVC engine"
 requires-python = ">=3.11"
 dependencies = ["mcp==2.3.0", "httpx==0.28.1"]

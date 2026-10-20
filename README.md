@@ -2,7 +2,7 @@
 
 **Give Dot a different voice with your own RVC model, locally on Windows.**
 
-English · [简体中文](README_CN.md) · [Download Windows Easy Edition](https://github.com/EllaZhangCA/dot-rvc-bridge/releases/tag/v0.3.0)
+English · [简体中文](README_CN.md) · [Download Windows Easy Edition](https://github.com/EllaZhangCA/dot-rvc-bridge/releases/tag/v0.3.1)
 
 A desktop controller, installer, and optional MCP server for routing Dot's playback through a local RVC engine. Includes model import, playback selection, pitch control, original-voice bypass, and start/pause.
 
@@ -10,7 +10,7 @@ This independent community project converts audio played on your PC; it is not a
 
 ## Quick start
 
-1. Download **dot-rvc-bridge-0.3.0-windows-easy.zip** from [Releases](https://github.com/EllaZhangCA/dot-rvc-bridge/releases/tag/v0.3.0). Extract to a permanent, writable folder. Choose this asset, not GitHub's automatic “Source code” ZIP.
+1. Download **dot-rvc-bridge-0.3.1-windows-easy.zip** from [Releases](https://github.com/EllaZhangCA/dot-rvc-bridge/releases/tag/v0.3.1). Extract to a permanent, writable folder. Choose this asset, not GitHub's automatic “Source code” ZIP.
 2. Double-click **Setup.cmd**. It installs private Python environments, CUDA-enabled PyTorch, the pinned engine, and base inference assets. The first install needs internet access, several GB of downloads, and about 15 GB of free disk space. No manual Python, Node.js, or C++ compiler installation is needed.
 3. If VB-CABLE is missing, setup opens its signed installer. Accept the Windows administrator prompt for **BUREL VINCENT**, click **Install Driver**, and restart if requested. Keep your usual microphone and speakers as Windows defaults.
 4. Double-click **Start.cmd**. Click **Import .pth**, select your model, choose playback headphones/speakers, then click **Start**.
@@ -27,7 +27,7 @@ Your microphone ─────────────────────�
 
 ## Support and limits
 
-| v0.3.0 supports | Details |
+| v0.3.1 supports | Details |
 | --- | --- |
 | RVC inference checkpoints | Standard **v2, f0=1**, 18-item configuration, 32/40/48 kHz |
 | Pitch extraction | RMVPE; NVIDIA GPU 0 |
